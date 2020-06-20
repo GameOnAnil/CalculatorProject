@@ -9,7 +9,8 @@
     <color name="Black">#000000</color>
     <color name="equals">#FF9D0D</color>
     <color name="numberBackground">#989696</color>
-    <color name="mainBackground">#F6F5F5</color>
+    <color name="mainBackgroundWhite">#F6F5F5</color>
+    <color name="mainBackgroundBlack">#121212</color>
 
 
 </resources>

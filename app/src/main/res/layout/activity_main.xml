@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/mainBackground"
+    android:background="@color/mainBackgroundBlack"
     >
 
     <EditText
@@ -99,7 +99,7 @@
         android:layout_marginTop="22dp"
         android:layout_marginEnd="142dp"
         android:text="="
-        android:background="@color/equals"
+        android:background="@drawable/equals_button_background"
         android:textColor="@color/colorFunctionButtonTxt"
         android:textAlignment="center"
         android:textSize="25dp"
