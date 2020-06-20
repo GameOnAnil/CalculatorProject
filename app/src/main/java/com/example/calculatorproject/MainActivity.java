@@ -15,7 +15,7 @@ import javax.xml.transform.Result;
 public class MainActivity extends AppCompatActivity {
     EditText Result;
     EditText Input;
-    float Res1, Res2;
+    float Res1, Res2,Res_final;
     Button b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b_dot, b_add, b_sub, b_mul, b_div, b_clear, b_equal;
     Boolean Add, Sub, Mul, Div;
 
@@ -132,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Input.setText(Input.getText().toString() + ".");
+                b_dot.setEnabled(false);
             }
         });
 
@@ -143,13 +144,21 @@ public class MainActivity extends AppCompatActivity {
                     Res1 = Float.parseFloat(Input.getText().toString());
                     Add = true;
                     Input.setText(null);
-
                     Result.setText(Float.toString(Res1)+"+");
+                    b_dot.setEnabled(true);
 
                 } else if (Add == true) {
                     Toast.makeText(MainActivity.this, "Please press = ", Toast.LENGTH_SHORT).show();
                 }
-
+                else {
+                    if (Input.getText().length() == 0 && Result.getText().length() > 0) {
+                        Res1 = Res_final;
+                        Add = true;
+                        Input.setText(null);
+                        Result.setText("Ans +");
+                        b_dot.setEnabled(true);
+                    }
+                }
 
             }
         });
@@ -162,6 +171,15 @@ public class MainActivity extends AppCompatActivity {
                     Sub = true;
                     Input.setText(null);
                     Result.setText(Float.toString(Res1)+"-");
+                    b_dot.setEnabled(true);
+                } else {
+                    if (Input.getText().length() == 0 && Result.getText().length() > 0) {
+                        Res1 = Res_final;
+                        Sub = true;
+                        Input.setText(null);
+                        Result.setText("Ans -");
+                        b_dot.setEnabled(true);
+                    }
                 }
             }
         });
@@ -174,6 +192,15 @@ public class MainActivity extends AppCompatActivity {
                     Mul = true;
                     Input.setText(null);
                     Result.setText(Float.toString(Res1)+"*");
+                    b_dot.setEnabled(true);
+                } else {
+                    if (Input.getText().length() == 0 && Result.getText().length() > 0) {
+                        Res1 = Res_final;
+                        Mul = true;
+                        Input.setText(null);
+                        Result.setText("Ans *");
+                        b_dot.setEnabled(true);
+                    }
                 }
             }
         });
@@ -186,6 +213,15 @@ public class MainActivity extends AppCompatActivity {
                     Div = true;
                     Input.setText(null);
                     Result.setText(Float.toString(Res1)+"/");
+                    b_dot.setEnabled(true);
+                } else {
+                    if (Input.getText().length() == 0 && Result.getText().length() > 0) {
+                        Res1 = Res_final;
+                        Div = true;
+                        Input.setText(null);
+                        Result.setText("Ans /");
+                        b_dot.setEnabled(true);
+                    }
                 }
             }
         });
@@ -195,6 +231,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Input.setText("");
                 Result.setText("");
+                b_dot.setEnabled(true);
             }
         });
 
@@ -204,9 +241,11 @@ public class MainActivity extends AppCompatActivity {
                 if (Add == true) {
                     if (Input.getText().length() > 0) {
                         Res2 = Float.parseFloat(Input.getText().toString());
-                        Result.setText(Float.toString(Res1) + " + " + Float.toString(Res2) + "= " + Float.toString(Res1 + Res2));
+                        Res_final = Res1 +Res2;
+                        Result.setText(Float.toString(Res1) + " + " + Float.toString(Res2) + "= " + Res_final);
                         Input.setText("");
                         Add = false;
+                        b_dot.setEnabled(true);
                     } else {
                         Toast.makeText(MainActivity.this, "Please enter second number", Toast.LENGTH_SHORT).show();
                     }
@@ -214,9 +253,11 @@ public class MainActivity extends AppCompatActivity {
                 if (Sub == true) {
                     if (Input.getText().length() > 0) {
                         Res2 = Float.parseFloat(Input.getText().toString());
-                        Result.setText(Float.toString(Res1) + " - " + Float.toString(Res2) + "= " + Float.toString(Res1 - Res2));
+                        Res_final = Res1 - Res2;
+                        Result.setText(Float.toString(Res1) + " - " + Float.toString(Res2) + "= " +  Res_final);
                         Input.setText("");
                         Sub = false;
+                        b_dot.setEnabled(true);
                     } else {
                         Toast.makeText(MainActivity.this, "Please enter second number", Toast.LENGTH_SHORT).show();
                     }
@@ -224,9 +265,11 @@ public class MainActivity extends AppCompatActivity {
                 if (Div == true) {
                     if (Input.getText().length() > 0) {
                         Res2 = Float.parseFloat(Input.getText().toString());
-                        Result.setText(Float.toString(Res1) + " / " + Float.toString(Res2) + "= " + Float.toString(Res1 / Res2));
+                        Res_final = Res1 / Res2;
+                        Result.setText(Float.toString(Res1) + " / " + Float.toString(Res2) + "= " +  Res_final);
                         Input.setText("");
                         Div = false;
+                        b_dot.setEnabled(true);
                     } else {
                         Toast.makeText(MainActivity.this, "Please enter second number", Toast.LENGTH_SHORT).show();
                     }
@@ -235,9 +278,11 @@ public class MainActivity extends AppCompatActivity {
                 if (Mul == true) {
                     if (Input.getText().length() > 0) {
                         Res2 = Float.parseFloat(Input.getText().toString());
-                        Result.setText(Float.toString(Res1) + " * " + Float.toString(Res2) + "= " + Float.toString(Res1 * Res2));
+                        Res_final = Res1 * Res2;
+                        Result.setText(Float.toString(Res1) + " * " + Float.toString(Res2) + "= " + Res_final);
                         Input.setText("");
                         Mul = false;
+                        b_dot.setEnabled(true);
                     } else {
                         Toast.makeText(MainActivity.this, "Please enter second number", Toast.LENGTH_SHORT).show();
                     }
@@ -247,6 +292,7 @@ public class MainActivity extends AppCompatActivity {
                     if (Input.getText().length() > 0){
                         Res2 = Float.parseFloat(Input.getText().toString());
                         Result.setText(Float.toString(Res2));
+                        b_dot.setEnabled(true);
                     }
 
 
