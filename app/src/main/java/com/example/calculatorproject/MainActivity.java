@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     EditText Result;
     EditText Input;
     float Res1, Res2;
-    Button b0, b1, b2, b3, b4, b5, b6, b7, b8, b9,b_dot, b_add, b_sub, b_mul, b_div, b_clear, b_equal;
+    Button b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b_dot, b_add, b_sub, b_mul, b_div, b_clear, b_equal;
     Boolean Add, Sub, Mul, Div;
 
 
@@ -139,13 +139,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(Input.getText().length() >0){
-                        Res1 = Float.parseFloat(Input.getText().toString());
-                        Add = true;
-                        Input.setText(null);
+                if (Input.getText().length() > 0) {
+                    Res1 = Float.parseFloat(Input.getText().toString());
+                    Add = true;
+                    Input.setText(null);
 
-                }else if(Add==true){
-                    Toast.makeText(MainActivity.this,"Please press = ",Toast.LENGTH_SHORT).show();
+                } else if (Add == true) {
+                    Toast.makeText(MainActivity.this, "Please press = ", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
         b_sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Input.getText().length() >0){
+                if (Input.getText().length() > 0) {
                     Res1 = Float.parseFloat(Input.getText().toString());
                     Sub = true;
                     Input.setText(null);
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
         b_mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Input.getText().length() >0){
+                if (Input.getText().length() > 0) {
                     Res1 = Float.parseFloat(Input.getText().toString());
                     Mul = true;
                     Input.setText(null);
@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
         b_div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Input.getText().length() >0){
+                if (Input.getText().length() > 0) {
                     Res1 = Float.parseFloat(Input.getText().toString());
                     Div = true;
                     Input.setText(null);
@@ -197,36 +197,61 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (Add == true) {
-                    Res2 = Float.parseFloat(Input.getText().toString());
-                    Result.setText(Float.toString(Res1)+" + "+Float.toString( Res2)+"= "+Float.toString(Res1 + Res2));
-                    Input.setText("");
-                    Add = false;
+                    if (Input.getText().length() > 0) {
+                        Res2 = Float.parseFloat(Input.getText().toString());
+                        Result.setText(Float.toString(Res1) + " + " + Float.toString(Res2) + "= " + Float.toString(Res1 + Res2));
+                        Input.setText("");
+                        Add = false;
+                    } else {
+                        Toast.makeText(MainActivity.this, "Please enter second number", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 if (Sub == true) {
-                    Res2 = Float.parseFloat(Input.getText().toString());
-                    Result.setText(Float.toString(Res1)+" - "+Float.toString( Res2)+"= "+Float.toString(Res1 - Res2));
-                    Input.setText("");
-                    Sub = false;
+                    if (Input.getText().length() > 0) {
+                        Res2 = Float.parseFloat(Input.getText().toString());
+                        Result.setText(Float.toString(Res1) + " - " + Float.toString(Res2) + "= " + Float.toString(Res1 - Res2));
+                        Input.setText("");
+                        Sub = false;
+                    } else {
+                        Toast.makeText(MainActivity.this, "Please enter second number", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 if (Div == true) {
-                    Res2 = Float.parseFloat(Input.getText().toString());
-                    Result.setText(Float.toString(Res1)+" / "+Float.toString( Res2)+"= "+Float.toString(Res1 / Res2));
-                    Input.setText("");
-                    Div = false;
+                    if (Input.getText().length() > 0) {
+                        Res2 = Float.parseFloat(Input.getText().toString());
+                        Result.setText(Float.toString(Res1) + " / " + Float.toString(Res2) + "= " + Float.toString(Res1 / Res2));
+                        Input.setText("");
+                        Div = false;
+                    } else {
+                        Toast.makeText(MainActivity.this, "Please enter second number", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
                 if (Mul == true) {
-                    Res2 = Float.parseFloat(Input.getText().toString());
-                    Result.setText(Float.toString(Res1)+" * "+Float.toString( Res2)+"= "+Float.toString(Res1 * Res2));
-                    Input.setText("");
-                    Mul = false;
+                    if (Input.getText().length() > 0) {
+                        Res2 = Float.parseFloat(Input.getText().toString());
+                        Result.setText(Float.toString(Res1) + " * " + Float.toString(Res2) + "= " + Float.toString(Res1 * Res2));
+                        Input.setText("");
+                        Mul = false;
+                    } else {
+                        Toast.makeText(MainActivity.this, "Please enter second number", Toast.LENGTH_SHORT).show();
+                    }
                 }
 
+                if(Add==false&&Sub==false&&Mul==false&&Div==false){
+                    if (Input.getText().length() > 0){
+                        Res2 = Float.parseFloat(Input.getText().toString());
+                        Result.setText(Float.toString(Res2));
+                    }
+
+
+                }
 
             }
+
 
         });
 
 
-
-
-    }}
+    }
+}
