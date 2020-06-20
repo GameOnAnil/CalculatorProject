@@ -141,12 +141,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (Input.getText().length() > 0) {
-                    Res1 = Float.parseFloat(Input.getText().toString());
-                    Add = true;
-                    Input.setText(null);
-                    Result.setText(Float.toString(Res1)+"+");
-                    b_dot.setEnabled(true);
-
+                    if(!Input.getText().toString().equals(".")) {
+                        Res1 = Float.parseFloat(Input.getText().toString());
+                        Add = true;
+                        Input.setText(null);
+                        Result.setText(Float.toString(Res1) + "+");
+                        b_dot.setEnabled(true);
+                    }
                 } else if (Add == true) {
                     Toast.makeText(MainActivity.this, "Please press = ", Toast.LENGTH_SHORT).show();
                 }
@@ -167,11 +168,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (Input.getText().length() > 0) {
-                    Res1 = Float.parseFloat(Input.getText().toString());
-                    Sub = true;
-                    Input.setText(null);
-                    Result.setText(Float.toString(Res1)+"-");
-                    b_dot.setEnabled(true);
+                    if(!Input.getText().toString().equals(".")) {
+                        Res1 = Float.parseFloat(Input.getText().toString());
+                        Sub = true;
+                        Input.setText(null);
+                        Result.setText(Float.toString(Res1) + "-");
+                        b_dot.setEnabled(true);
+                    }
                 } else {
                     if (Input.getText().length() == 0 && Result.getText().length() > 0) {
                         Res1 = Res_final;
@@ -188,11 +191,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (Input.getText().length() > 0) {
-                    Res1 = Float.parseFloat(Input.getText().toString());
-                    Mul = true;
-                    Input.setText(null);
-                    Result.setText(Float.toString(Res1)+"*");
-                    b_dot.setEnabled(true);
+                    if(!Input.getText().toString().equals(".")) {
+                        Res1 = Float.parseFloat(Input.getText().toString());
+                        Mul = true;
+                        Input.setText(null);
+                        Result.setText(Float.toString(Res1) + "*");
+                        b_dot.setEnabled(true);
+                    }
                 } else {
                     if (Input.getText().length() == 0 && Result.getText().length() > 0) {
                         Res1 = Res_final;
@@ -209,11 +214,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (Input.getText().length() > 0) {
-                    Res1 = Float.parseFloat(Input.getText().toString());
-                    Div = true;
-                    Input.setText(null);
-                    Result.setText(Float.toString(Res1)+"/");
-                    b_dot.setEnabled(true);
+                    if(!Input.getText().toString().equals(".")) {
+                        Res1 = Float.parseFloat(Input.getText().toString());
+                        Div = true;
+                        Input.setText(null);
+                        Result.setText(Float.toString(Res1) + "/");
+                        b_dot.setEnabled(true);
+                    }
                 } else {
                     if (Input.getText().length() == 0 && Result.getText().length() > 0) {
                         Res1 = Res_final;
@@ -289,10 +296,13 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if(Add==false&&Sub==false&&Mul==false&&Div==false){
-                    if (Input.getText().length() > 0){
-                        Res2 = Float.parseFloat(Input.getText().toString());
-                        Result.setText(Float.toString(Res2));
-                        b_dot.setEnabled(true);
+                    if (Input.getText().length() > 0 ){
+                        if(!Input.getText().toString().equals(".")){
+                            Res2 = Float.parseFloat(Input.getText().toString());
+                            Result.setText(Float.toString(Res2));
+                            b_dot.setEnabled(true);
+                        }
+
                     }
 
 
