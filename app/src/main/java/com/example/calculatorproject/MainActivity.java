@@ -144,6 +144,8 @@ public class MainActivity extends AppCompatActivity {
                     Add = true;
                     Input.setText(null);
 
+                    Result.setText(Float.toString(Res1)+"+");
+
                 } else if (Add == true) {
                     Toast.makeText(MainActivity.this, "Please press = ", Toast.LENGTH_SHORT).show();
                 }
@@ -159,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
                     Res1 = Float.parseFloat(Input.getText().toString());
                     Sub = true;
                     Input.setText(null);
+                    Result.setText(Float.toString(Res1)+"-");
                 }
             }
         });
@@ -170,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
                     Res1 = Float.parseFloat(Input.getText().toString());
                     Mul = true;
                     Input.setText(null);
+                    Result.setText(Float.toString(Res1)+"*");
                 }
             }
         });
@@ -181,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
                     Res1 = Float.parseFloat(Input.getText().toString());
                     Div = true;
                     Input.setText(null);
+                    Result.setText(Float.toString(Res1)+"/");
                 }
             }
         });

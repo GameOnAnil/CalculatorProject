@@ -5,6 +5,24 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
     </style>
+
+    <style name="RoundedCorners">
+        <item name="background">@drawable/number_background</item>
+    </style>
+
+
+<style name="ButtonDesign">
+    <item name="android:textSize">40sp</item>
+    <item name="android:minHeight">80sp</item>
+    <item name="android:textColor">@color/colorFunctionButtonTxt</item>
+    <item name="background">@drawable/operators_background</item>
+
+
+</style>
 
 </resources>

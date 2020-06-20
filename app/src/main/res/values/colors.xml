@@ -3,4 +3,13 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    
+    <color name="colorFunctionButton">#333333</color>
+    <color name="colorFunctionButtonTxt">#F9F7FB</color>
+    <color name="Black">#000000</color>
+    <color name="equals">#FF9D0D</color>
+    <color name="numberBackground">#989696</color>
+    <color name="mainBackground">#F6F5F5</color>
+
+
 </resources>
