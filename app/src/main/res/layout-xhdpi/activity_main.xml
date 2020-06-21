@@ -4,111 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@color/mainBackgroundBlack"
-    >
-
-    <EditText
-        android:id="@+id/Input"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="28dp"
-        android:textSize="25sp"
-        android:editable="false"
-        android:background="@color/colorFunctionButton"
-        android:textColor="@color/colorFunctionButtonTxt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Result" />
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/Result"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="28dp"
-        android:textSize="25sp"
-        android:hint="Result"
-        android:editable="false"
-        android:textColorHint="@color/colorFunctionButtonTxt"
+        android:layout_width="350dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="96dp"
         android:background="@color/colorFunctionButton"
+        android:editable="false"
+        android:hint="Result"
+        android:padding="5sp"
         android:textColor="@color/colorFunctionButtonTxt"
+        android:textColorHint="@color/colorFunctionButtonTxt"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/b9"
-
-        style="@style/RoundedCorners"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="56dp"
-        android:background="@drawable/number_background"
-        android:text="9"
-        android:textAlignment="center"
-        android:textColor="@color/Black"
-        android:textSize="23sp"
-        app:layout_constraintEnd_toStartOf="@+id/b8"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Input" />
-
-    <Button
-
-        android:id="@+id/b1"
-        style="@style/RoundedCorners"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/number_background"
-        android:text="1"
-
-        android:textAlignment="center"
-        android:textColor="@color/Black"
-        android:textSize="23sp"
-        app:layout_constraintEnd_toStartOf="@+id/b_add"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/b2"
-        app:layout_constraintTop_toBottomOf="@+id/b4" />
-
-    <Button
-        android:id="@+id/b4"
-        style="@style/RoundedCorners"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/number_background"
-        android:text="4"
-        android:textAlignment="center"
-        android:textColor="@color/Black"
-        android:textSize="23sp"
-        app:layout_constraintEnd_toStartOf="@+id/b_div"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/b5"
-        app:layout_constraintTop_toBottomOf="@+id/b7" />
-
-    <Button
-        android:id="@+id/b_equal"
-        android:layout_width="141dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="142dp"
-        android:background="@drawable/equals_button_background"
-        android:text="="
-        android:textAlignment="center"
-        android:textColor="@color/colorFunctionButtonTxt"
-        android:textSize="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b_dot" />
 
     <Button
         android:id="@+id/b8"
@@ -127,6 +41,115 @@
         app:layout_constraintTop_toBottomOf="@+id/Input" />
 
     <Button
+        android:id="@+id/b_div"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/operators_background"
+        android:text="/"
+        android:textAlignment="center"
+        android:textColor="@color/colorFunctionButtonTxt"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b4"
+        app:layout_constraintTop_toBottomOf="@+id/b_mul" />
+
+    <Button
+        android:id="@+id/b2"
+        style="@style/RoundedCorners"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/number_background"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/b1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b3"
+        app:layout_constraintTop_toBottomOf="@+id/b5" />
+
+    <Button
+        android:id="@+id/b_dot"
+        style="@style/RoundedCorners"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/number_background"
+        android:text="."
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/b_sub"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b0"
+        app:layout_constraintTop_toBottomOf="@+id/b1" />
+
+    <Button
+        android:id="@+id/b9"
+
+        style="@style/RoundedCorners"
+        android:layout_width="80dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/number_background"
+        android:text="9"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/b8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Input" />
+
+    <EditText
+        android:id="@+id/Input"
+        android:layout_width="350dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorFunctionButton"
+        android:editable="false"
+        android:textColor="@color/colorFunctionButtonTxt"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Result" />
+
+    <Button
+        android:id="@+id/b4"
+        style="@style/RoundedCorners"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/number_background"
+        android:text="4"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/b_div"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b5"
+        app:layout_constraintTop_toBottomOf="@+id/b7" />
+
+    <Button
+        android:id="@+id/b_add"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/operators_background"
+        android:text="+"
+        android:textAlignment="center"
+        android:textColor="@color/colorFunctionButtonTxt"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b1"
+        app:layout_constraintTop_toBottomOf="@+id/b_div" />
+
+    <Button
         android:id="@+id/b3"
         style="@style/RoundedCorners"
         android:layout_width="80dp"
@@ -141,6 +164,38 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/b6" />
+
+    <Button
+        android:id="@+id/b_clear"
+        style="@style/RoundedCorners"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/number_background"
+        android:text="C"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/b0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b3" />
+
+    <Button
+        android:id="@+id/b6"
+        style="@style/RoundedCorners"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/number_background"
+        android:text="6"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/b5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b9" />
 
     <Button
         android:id="@+id/b7"
@@ -189,66 +244,18 @@
         app:layout_constraintTop_toBottomOf="@+id/b_add" />
 
     <Button
-        android:id="@+id/b_div"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/operators_background"
-        android:text="/"
+        android:id="@+id/b_equal"
+        android:layout_width="141dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/equals_button_background"
+        android:text="="
         android:textAlignment="center"
         android:textColor="@color/colorFunctionButtonTxt"
-        android:textSize="25sp"
+        android:textSize="35dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/b4"
-        app:layout_constraintTop_toBottomOf="@+id/b_mul" />
-
-    <Button
-        android:id="@+id/b_add"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/operators_background"
-        android:text="+"
-        android:textAlignment="center"
-        android:textColor="@color/colorFunctionButtonTxt"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/b1"
-        app:layout_constraintTop_toBottomOf="@+id/b_div" />
-
-    <Button
-        android:id="@+id/b2"
-        style="@style/RoundedCorners"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/number_background"
-        android:text="2"
-        android:textAlignment="center"
-        android:textColor="@color/Black"
-        android:textSize="23sp"
-        app:layout_constraintEnd_toStartOf="@+id/b1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/b3"
-        app:layout_constraintTop_toBottomOf="@+id/b5" />
-
-    <Button
-        android:id="@+id/b_clear"
-        style="@style/RoundedCorners"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/number_background"
-        android:text="C"
-        android:textAlignment="center"
-        android:textColor="@color/Black"
-        android:textSize="23sp"
-        app:layout_constraintEnd_toStartOf="@+id/b0"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b3" />
+        app:layout_constraintTop_toBottomOf="@+id/b_dot" />
 
     <Button
         android:id="@+id/b5"
@@ -283,36 +290,22 @@
         app:layout_constraintTop_toBottomOf="@+id/b2" />
 
     <Button
-        android:id="@+id/b_dot"
-        style="@style/RoundedCorners"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/number_background"
-        android:text="."
-        android:textAlignment="center"
-        android:textColor="@color/Black"
-        android:textSize="23sp"
-        app:layout_constraintEnd_toStartOf="@+id/b_sub"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/b0"
-        app:layout_constraintTop_toBottomOf="@+id/b1" />
 
-    <Button
-        android:id="@+id/b6"
+        android:id="@+id/b1"
         style="@style/RoundedCorners"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/number_background"
-        android:text="6"
+
+        android:text="1"
         android:textAlignment="center"
         android:textColor="@color/Black"
         android:textSize="23sp"
-        app:layout_constraintEnd_toStartOf="@+id/b5"
+        app:layout_constraintEnd_toStartOf="@+id/b_add"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b9" />
+        app:layout_constraintStart_toEndOf="@+id/b2"
+        app:layout_constraintTop_toBottomOf="@+id/b4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

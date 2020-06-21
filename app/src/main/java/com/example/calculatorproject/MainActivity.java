@@ -239,6 +239,7 @@ public class MainActivity extends AppCompatActivity {
                 Input.setText("");
                 Result.setText("");
                 b_dot.setEnabled(true);
+                Res_final = Float.parseFloat("0");
             }
         });
 
